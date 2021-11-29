@@ -12,13 +12,13 @@ from a raspberry-pi. Supported are all LEDs of the NEOPIXEL/WS281x-family
 
 this module is available via npm:
 
-    npm install rpi-ws281x-native
+    npm install ngx-rpi-ws281x
 
 if you prefer installing from source:
 
     npm install -g node-gyp
-    git clone --recursive https://github.com/beyondscreen/node-rpi-ws281x-native.git
-    cd rpi-ws281x-native
+    git clone --recursive https://github.com/beyondscreen/node-ngx-rpi-ws281x.git
+    cd ngx-rpi-ws281x
     npm install
 
 
@@ -39,7 +39,7 @@ It will initialize the driver for 100 LEDs and set all LEDs to the
 same, pinkish color:
 
 ```javascript
-const ws281x = require('rpi-ws281x-native');
+const ws281x = require('ngx-rpi-ws281x');
 
 const channel = ws281x(100, { stripType: 'ws2812' });
 
@@ -62,7 +62,7 @@ way for initialization using the top-level export function.
 #### Example:
 
 ```javascript
-const ws2821x = require('rpi-ws281x-native');
+const ws2821x = require('ngx-rpi-ws281x');
 const options = {
   dma: 10,
   freq: 800000,
@@ -95,7 +95,7 @@ Configures and initializes the drivers and returns an array of channel-interface
 #### Example:
 
 ```javascript
-const ws2821x = require('rpi-ws281x-native');
+const ws2821x = require('ngx-rpi-ws281x');
 
 const channels = ws281x.init({
   dma: 10,
@@ -130,7 +130,7 @@ Send the current state of the channel color-buffers to the LEDs.
 #### Example:
 
 ```javascript
-const ws2821x = require('rpi-ws281x-native');
+const ws2821x = require('ngx-rpi-ws281x');
 
 // initialize
 const [channel] = ws281x.init(options);

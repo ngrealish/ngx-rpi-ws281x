@@ -1,0 +1,1 @@
+cmd_--nothing-built-- := LD_LIBRARY_PATH=/Users/grealishn/Development/ngx-rpi-ws281x/build/Release/lib.host:/Users/grealishn/Development/ngx-rpi-ws281x/build/Release/lib.target:$$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../.; true
